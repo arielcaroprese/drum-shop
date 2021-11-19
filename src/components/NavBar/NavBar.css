@@ -1,13 +1,13 @@
-nav {
+.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1024px;
-    padding: 0 36px;
     background-color: rgb(10, 10, 10);
+    padding: 16px 10%;
 }
 
 nav ul {
+    display: inline;
     list-style: none;
 }
 
@@ -26,6 +26,7 @@ nav ul li a {
 }
 
 .logoHeader p {
+    display: inline;
     color: white;
     font-size: 20px;
 }

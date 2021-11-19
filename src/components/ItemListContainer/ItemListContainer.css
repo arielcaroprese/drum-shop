@@ -1,0 +1,11 @@
+.ItemListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+}
+
+.ItemListContainer p {
+    font-size: 32px;
+}
