@@ -1,0 +1,26 @@
+.ItemCount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px grey;
+    border-radius: 4px;
+    width: 140px;
+    height: 48px;
+}
+
+.counter {
+    display: inline;
+    font-size: 20px;
+    margin: 0;
+}
+
+.button {
+    background-color: rgb(29, 29, 29);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    height: 32px;
+    width: 32px;
+    padding: 0px;
+}
