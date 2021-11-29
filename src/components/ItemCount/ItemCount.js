@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-
 import "./ItemCount.css";
+import { FaShoppingCart } from "react-icons/fa";
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [counter, setCounter] = useState(parseInt(initial));
+    const [counter, setCounter] = useState(initial);
 
     const handleCounterUp = () => {
         if (counter < stock) {
@@ -23,6 +23,17 @@ const ItemCount = ({stock, initial}) => {
             <button className="button" onClick={handleCounterDown}>-</button>
             <p className="counter">{counter}</p>
             <button className="button" onClick={handleCounterUp}>+</button>
+            {
+                counter > 0 ?
+                <button className="addToCart" onClick={() => onAdd(counter)}>
+                    <FaShoppingCart/> Agregar al carrito
+                </button>
+                :
+                <button className="addToCart disabled">
+                    <FaShoppingCart/> Agregar al carrito
+                </button>
+            }
+            
         </div>
     );
 };

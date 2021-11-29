@@ -1,10 +1,13 @@
-import React from "react";
-import "./ItemListContainer.css" 
+import React from 'react';
+import "./ItemListContainer.css"; 
+import ItemList from "../ItemList/ItemList";
 
-export default function ItemListContainer({greeting}) {
+const ItemListContainer = () => {
     return (
         <div className="ItemListContainer">
-            <p>{greeting}</p>
+            <ItemList/>
         </div>
     )
 }
+
+export default ItemListContainer

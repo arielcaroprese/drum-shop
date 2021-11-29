@@ -1,11 +1,12 @@
 .ItemCount {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    border: solid 2px grey;
+    border: solid 2px rgb(190, 190, 190);
     border-radius: 4px;
-    width: 140px;
-    height: 48px;
+    margin: 24px;
+    width: 220px;
 }
 
 .counter {
@@ -23,4 +24,20 @@
     height: 32px;
     width: 32px;
     padding: 0px;
+}
+
+.addToCart {
+    background-color: rgb(190, 190, 190);
+    border: none;
+    font-size: 20px;
+    color: white;
+    height: 32px;
+    width: 100%;
+    padding: 0px;
+    margin-top: 16px;
+}
+
+.disabled {
+    background-color: rgb(206, 206, 206);
+    color: rgb(238, 238, 238);
 }

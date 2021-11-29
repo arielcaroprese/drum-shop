@@ -1,0 +1,35 @@
+.item {
+    width: 240px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.200);
+}
+
+.item:hover {
+    transform: scale(1.02);
+    transition-duration: 300ms;
+}
+
+.itemImage {
+    width: 150px;
+    height: 150px;
+}
+
+.itemTitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.itemId {
+    font-size: 12px;
+}
+
+.itemPrice {
+    font-size: 18px;
+    font-weight: 600;
+}
