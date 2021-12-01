@@ -1,0 +1,15 @@
+.ItemDetailContainer {
+    display: flex;
+
+}
+
+.imgItemDetail {
+    width: 300px;
+
+}
+
+.ItemDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

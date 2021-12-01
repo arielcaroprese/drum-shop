@@ -5,8 +5,6 @@ import './ItemList.css'
 const ItemList = ( ) => {
     const [items, setItems] = useState([]);
 
-    console.log(items);
-
     useEffect(() => {
         setTimeout(() => {
             fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1574&limit=12')
