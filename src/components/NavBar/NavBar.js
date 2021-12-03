@@ -1,29 +1,26 @@
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget"
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
      <nav className="navBar">
-         <div className="logoHeader">
+        <div className="logoHeader">
             <p>Pantera</p>
-         </div>        
-         <ul className="navHeader">
-            <li>
-                <a href="#1">Home</a>
-            </li>
-            <li>
-                <a href="#2">Shop</a>
-            </li>
-            <li>
-                <a href="#3">Nosotros</a>
-            </li>
-            <li>
-                <a href="#4">Contacto</a>
-            </li>
-            <li>
-                <CartWidget/>
-            </li>
-         </ul>
+        </div>
+        <NavLink to="/" className="NavLink">
+            Home
+        </NavLink> 
+        <NavLink to="/category/MLA1648" className="NavLink">
+            Computación
+        </NavLink> 
+        <NavLink to="/category/MLA1051" className="NavLink">
+            Celulares y Teléfonos
+        </NavLink>        
+        <NavLink to="/category/MLA1144" className="NavLink">
+            Consolas y Videojuegos
+        </NavLink>     
+        <CartWidget/>
     </nav>
     );   
 };

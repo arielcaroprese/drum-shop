@@ -1,18 +1,20 @@
 import React , { useEffect, useState } from 'react'
+import {useParams} from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([]);
+    const {id} = useParams();
+    const [item, setItem] = useState({});
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1574&limit=1')
+            fetch(`https://api.mercadolibre.com/items/${id}`)
             .then((response) => response.json())
-            .then((json) => { console.log(json.results); setItem(json.results[0])})
+            .then((json) => { console.log(json); setItem(json)})
             .catch(error => console.log('Error: ', error))
         }, 2000)
-    }, [])
+    }, [id])
 
     return (
         <>

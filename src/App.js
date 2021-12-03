@@ -1,23 +1,30 @@
 import React, { Component } from "react";
+
+//Styles
 import './App.css';
 
 // Components
-import Header from "./components/Header/Header";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from './components/NavBar/NavBar';
-import ItemCountContainer from "./components/ItemCountContainer/ItemCountContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+
+// Views
+import Home from "./views/Home"
+import Category from "./views/Category"
+
+// React Router
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <>
+      <Router>
         <NavBar />
-        <ItemCountContainer/>
-        <ItemListContainer />
-        <ItemDetailContainer/>
-        <Header />
-      </>
+          <Routes>
+            <Route path='/' element={<Home/>} ></Route>
+            <Route exact path='/category/:categoryId' element={<Category />} ></Route>
+            <Route exact path='/item/:id' element={<ItemDetailContainer />} ></Route>
+          </Routes>
+      </Router>
     );
   }
 }
