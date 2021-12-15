@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./ItemCount.css";
 import { FaShoppingCart } from "react-icons/fa";
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({item, stock, initial, addItem}) => {
 
     const [counter, setCounter] = useState(initial);
 
@@ -25,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button className="button" onClick={handleCounterUp}>+</button>
             {
                 counter > 0 ?
-                <button className="addToCart" onClick={() => onAdd(counter)}>
+                <button className="addToCart" onClick={() => addItem(item, counter)}>
                     <FaShoppingCart/> Agregar al carrito
                 </button>
                 :

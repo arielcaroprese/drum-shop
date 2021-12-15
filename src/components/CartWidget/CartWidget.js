@@ -1,12 +1,23 @@
-import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import React, { useContext } from "react";
 import "./CartWidget.css"
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
-const CartWidget = (props) => {
+const CartWidget = () => {
+
+    const {items} = useContext(CartContext)
+    let itemsInCart = 0;
+
+    items.map((item) => 
+        itemsInCart = itemsInCart + item.qty
+    )
+
     return (
-        <div className="cartWidget">
+        <Link to="/cart" className="cartWidget">
+            <p>{itemsInCart}</p>
             <FaShoppingCart/>
-        </div>
+        </Link>
     )
 }
 

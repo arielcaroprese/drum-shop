@@ -2,3 +2,8 @@
     display: inline;
     color: white;
 }
+
+.cartWidget p {
+    display: inline;
+    margin-right: 8px;
+}
