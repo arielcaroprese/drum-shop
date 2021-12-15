@@ -14,7 +14,7 @@ const CartWidget = () => {
     )
 
     return (
-        <Link to="/cart" className="cartWidget">
+        <Link to="/cart" className={ itemsInCart === 0 ? "cartWidgetNone" : "cartWidget"}>
             <p>{itemsInCart}</p>
             <FaShoppingCart/>
         </Link>

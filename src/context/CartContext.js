@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
                 return prod
             }))
             :
-            setItems([...items, {id: item.id, name: item.title, price: item.price, qty: qty}])
+            setItems([...items, {id: item.id, name: item.title, price: item.price, qty: qty, thumbnail: item.thumbnail}])
 
     }
 
@@ -32,8 +32,12 @@ export const CartProvider = ({ children }) => {
         setItems([])   
     }
 
+    const totalPrice = () => {
+        return items.reduce ( (acum, value) => (acum + (value.qty * value.price)) , 0)
+    }
+
     return (
-        <CartContext.Provider value={{items, addItem, removeItem, clear}}>
+        <CartContext.Provider value={{items, addItem, removeItem, clear, totalPrice}}>
             {children}
         </CartContext.Provider>
     )
