@@ -7,6 +7,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout";
 
 // Views
 import Home from "./views/Home"
@@ -20,8 +21,6 @@ import { CartProvider } from "./context/CartContext";
 
 // Firebase
 
-import { db } from './firebase/firebaseConfig';
-
 class App extends Component {
   render() {
     return (
@@ -33,6 +32,7 @@ class App extends Component {
               <Route exact path='/category/:categoryId' element={<Category />} ></Route>
               <Route exact path='/item/:id' element={<ItemDetailContainer />} ></Route>
               <Route path='/cart' element={<Cart/>} ></Route>
+              <Route path='/checkout' element={<Checkout/>}></Route>
             </Routes>
         </Router>
       </CartProvider>

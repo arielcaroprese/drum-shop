@@ -16,24 +16,26 @@ const Cart = () => {
                 </>
             }            
             {items.length > 0 &&
-                items.map((item) => (
-                    <div key= {item.id} className='cartItem'>
-                        <img src={item.img} alt={item.name} className="cartItemImg"></img>
-                        <div className='cartItemDetail'>
-                            <h4>{item.name}</h4>
-                            <p>{item.id}</p>
+                <>
+                {items.map((item) => (
+                        <div key= {item.id} className='cartItem'>
+                            <img src={item.img} alt={item.name} className="cartItemImg"></img>
+                            <div className='cartItemDetail'>
+                                <h4>{item.name}</h4>
+                                <p>{item.id}</p>
+                            </div>
+                            <div className='cartItemPrice'>
+                                <p>Cantidad: {item.qty}</p>
+                                <p>Precio: $ {item.qty * item.price}</p>
+                                <button onClick={() => removeItem(item.id)}>Borrar</button>
+                            </div>
                         </div>
-                        <div className='cartItemPrice'>
-                            <p>Cantidad: {item.qty}</p>
-                            <p>Precio: $ {item.qty * item.price}</p>
-                            <button onClick={() => removeItem(item.id)}>Borrar</button>
-                        </div>
-                    </div>
-                ))
+                ))}
+                <p className='cartTotalPrice'>Precio total: $ {totalPrice()}</p>
+                <button onClick={() => clear()}>Vaciar Carrito</button>
+                <Link to="/checkout">Continuar compra</Link>
+                </>
             }
-            <p className='cartTotalPrice'>Precio total: $ {totalPrice()}</p>
-            <button onClick={() => clear()}>Borrar todo</button>
-            <button onClick={console.log()}>Continuar compra</button>
         </div>
     )
 }
