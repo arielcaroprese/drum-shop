@@ -13,14 +13,14 @@ const NavBar = () => {
         <NavLink to="/" className="NavLink">
             Home
         </NavLink> 
-        <NavLink to="/category/MLA1648" className="NavLink">
-            Computación
+        <NavLink to="/category/baterias-acusticas" className="NavLink">
+            Baterías Acústicas
         </NavLink> 
-        <NavLink to="/category/MLA1051" className="NavLink">
-            Celulares y Teléfonos
+        <NavLink to="/category/baterias-electronicas" className="NavLink">
+            Baterías Electrónicas
         </NavLink>        
-        <NavLink to="/category/MLA1144" className="NavLink">
-            Consolas y Videojuegos
+        <NavLink to="/category/percusion" className="NavLink">
+            Percusión
         </NavLink>     
         <CartWidget/>
     </nav>

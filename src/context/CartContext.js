@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
                 return prod
             }))
             :
-            setItems([...items, {id: item.id, name: item.title, price: item.price, qty: qty, thumbnail: item.thumbnail}])
+            setItems([...items, {id: item.id, name: item.title, price: item.price, qty: qty, img: item.img}])
 
     }
 

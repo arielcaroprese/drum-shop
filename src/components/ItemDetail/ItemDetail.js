@@ -17,11 +17,11 @@ const ItemDetail = ({ item }) => {
 
     return (
         <div className="ItemDetailContainer">
-            <img src={item.thumbnail} alt={item.title} className="imgItemDetail"></img>
+            <img src={item.img} alt={item.title} className="imgItemDetail"></img>
             <div className="ItemDetail">
                 <h1>{item.title}</h1>
                 <p>ID: {item.id}</p>
-                <p>Stock: {item.available_quantity}</p>
+                <p>Stock: {item.stock}</p>
                 {
                     add ?
                     <div>
@@ -29,7 +29,7 @@ const ItemDetail = ({ item }) => {
                         <Link to='/cart'>Ir al carrito</Link>
                     </div>
                     :
-                    <ItemCount onClick={(add) => {setAdd(!add)}} item={item} stock={item.available_quantity} initial={1} addItem={addItem}/>
+                    <ItemCount onClick={(add) => {setAdd(!add)}} item={item} stock={item.stock} initial={1} addItem={addItem}/>
                 }
             </div>
         </div>

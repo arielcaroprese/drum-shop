@@ -1,18 +1,35 @@
+//React
+
 import React , { useEffect, useState } from 'react'
+
+//Styles
+
 import "./ItemListContainer.css"; 
+
+// Components
+
 import ItemList from "../ItemList/ItemList";
+
+// Firebase 
+
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
 
 const ItemListContainer = ( {categoryId} ) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch(`https://api.mercadolibre.com/sites/MLA/search?category=${categoryId}&limit=6`)
-            .then((response) => response.json())
-            .then((json) => { console.log(json.results); setItems(json.results)})
-            .catch(error => console.log('Error: ', error))
-        }, 2000)
-    }, [categoryId])
+        const getProducts = async () => {
+            const q = query(collection(db, "productos"), where("category", "==", categoryId));
+            const items = [];
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                items.push(doc.data())
+            });
+            setItems(items)
+        }
+        getProducts();
+    }, [categoryId]);
 
     return (
         <div className="ItemListContainer">
@@ -22,5 +39,3 @@ const ItemListContainer = ( {categoryId} ) => {
 }
 
 export default ItemListContainer
-
-//MLA1648

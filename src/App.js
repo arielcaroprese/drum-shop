@@ -18,6 +18,10 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 // Context
 import { CartProvider } from "./context/CartContext";
 
+// Firebase
+
+import { db } from './firebase/firebaseConfig';
+
 class App extends Component {
   render() {
     return (
