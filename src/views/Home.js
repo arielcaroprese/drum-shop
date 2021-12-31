@@ -1,13 +1,12 @@
 import React from 'react'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+import Slider from '../components/Slider/Slider'
 
 const Home = () => {
     return (
         <>
-            <h1>Home</h1>
-            <ItemListContainer categoryId="baterias-acusticas" />
-            <ItemListContainer categoryId="baterias-electronicas" />
-            <ItemListContainer categoryId="percusion" />
+            <Slider/>
+            <ItemListContainer categoryId="allCategories" />
         </>
     )
 }

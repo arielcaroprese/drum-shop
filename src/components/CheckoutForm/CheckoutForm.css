@@ -1,0 +1,26 @@
+.formContainer {
+    width: 50%;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 32px;
+
+}
+
+.formContainer form input{
+    width: 80%;
+    max-width: 400px;
+    flex-direction: column;
+    border: 1px solid #9b9b9b;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.successfulOrder {
+    width: 50%;
+}

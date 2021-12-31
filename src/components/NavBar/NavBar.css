@@ -2,20 +2,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(10, 10, 10);
+    background-color: #1f1f1f;
     padding: 16px 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
 }
 
 .NavLink {
-    
-}
-
-.logoHeader {
-    display: inline;
-}
-
-.logoHeader p {
-    display: inline;
     color: white;
-    font-size: 20px;
+    transition: 300ms;
+}
+
+.NavLink:hover {
+    color: #fddc5b;
+    transform: translateY(-4px);
+}
+
+.siteLogo {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.siteTitle {
+    font-size: 20px;    
+}
+
+.logoContainer {
+    color: #fddc5b;
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+}
+
+.logoContainer:hover {
+    transform: scale(1.1);
+}
+
+.mainMenu {
+    display: flex;
+    gap: 32px
 }

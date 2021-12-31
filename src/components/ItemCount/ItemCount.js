@@ -1,10 +1,14 @@
 import React, {useState} from "react";
 import "./ItemCount.css";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaCheck, FaMinus, FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+import Button from "../Button/Button";
 
 const ItemCount = ({item, stock, initial, addItem}) => {
 
     const [counter, setCounter] = useState(initial);
+    const [addStatus, setAddStatus] = useState(false);
 
     const handleCounterUp = () => {
         if (counter < stock) {
@@ -19,21 +23,35 @@ const ItemCount = ({item, stock, initial, addItem}) => {
     };
 
     return (
-        <div className="ItemCount">
-            <button className="button" onClick={handleCounterDown}>-</button>
-            <p className="counter">{counter}</p>
-            <button className="button" onClick={handleCounterUp}>+</button>
-            {
-                counter > 0 ?
-                <button className="addToCart" onClick={() => addItem(item, counter)}>
-                    <FaShoppingCart/> Agregar al carrito
-                </button>
-                :
-                <button className="addToCart disabled">
-                    <FaShoppingCart/> Agregar al carrito
-                </button>
-            }
-            
+        <div className="itemCountContainer">
+            {!addStatus
+            ?
+            <>
+                <div className="ItemCount">
+                <button onClick={handleCounterDown} className="counterButton"><FaMinus/></button>
+                <span className="counter">{counter}</span>
+                <button onClick={handleCounterUp} className="counterButton"><FaPlus/></button>
+                </div>
+                {counter > 0 ?
+                <div onClick={() => {
+                    addItem(item, counter);
+                    setAddStatus(true);
+                }}>
+                    <Button buttonTitle="Agregar al carrito" buttonClass="btnActive" />
+                </div>
+                                :
+                <Button buttonTitle="Agregar al carrito" buttonClass="btnDisabled"/>
+                }
+            </>
+            :
+            <>
+                <p><FaCheck/> Agregaste {counter}{counter > 1 ? " productos" : " producto"} al carrito</p>
+                <Link to="/cart">
+                    <Button buttonTitle="Ir al carrito" buttonClass="btnActive"/>
+                </Link>
+
+            </>
+            }      
         </div>
     );
 };

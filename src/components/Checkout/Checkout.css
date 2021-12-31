@@ -1,0 +1,14 @@
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    gap: 16px;
+    padding: 5vh 0;
+    text-align: center;
+
+}
+
+.checkoutColumns {
+    display: flex;
+    align-items: center;
+}

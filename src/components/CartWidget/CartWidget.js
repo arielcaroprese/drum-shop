@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import "./CartWidget.css"
-import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+
+import { FaShoppingCart } from 'react-icons/fa'
 
 const CartWidget = () => {
 
@@ -14,10 +15,10 @@ const CartWidget = () => {
     )
 
     return (
-        <Link to="/cart" className={ itemsInCart === 0 ? "cartWidgetNone" : "cartWidget"}>
-            <p>{itemsInCart}</p>
-            <FaShoppingCart/>
-        </Link>
+        <Link to="/cart" className="cartWidget">
+            <FaShoppingCart />
+            <span className={ itemsInCart === 0 ? "cartCounterNone" : "cartCounter" }>{itemsInCart}</span>
+            </Link>
     )
 }
 

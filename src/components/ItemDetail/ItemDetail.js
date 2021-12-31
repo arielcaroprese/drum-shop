@@ -9,27 +9,25 @@ const ItemDetail = ({ item }) => {
     const [add, setAdd] = useState(false)
 
     const { addItem } = useContext(CartContext)
-
-    //este renderizado condicional lo voy a usar después pero haciendo un find del id
-    const addToCart = () => {
-        setAdd(!add)
-    }
-
+    
     return (
         <div className="ItemDetailContainer">
-            <img src={item.img} alt={item.title} className="imgItemDetail"></img>
+            <div className='imgItemDetailContainer'>
+                <img src={item.img} alt={item.title} className="imgItemDetail"></img>
+            </div>
             <div className="ItemDetail">
                 <h1>{item.title}</h1>
                 <p>ID: {item.id}</p>
+                <p>{item.description}</p>
                 <p>Stock: {item.stock}</p>
                 {
-                    add ?
+                    !add ?
+                     <ItemCount onClick={() => {setAdd(true)}} item={item} stock={item.stock} initial={1} addItem={addItem}/>
+                    :
                     <div>
-                        <p>`¡Agregaste tus productos al carrito!`</p>
+                        <span>`¡Agregaste tus productos al carrito!`</span>
                         <Link to='/cart'>Ir al carrito</Link>
                     </div>
-                    :
-                    <ItemCount onClick={(add) => {setAdd(!add)}} item={item} stock={item.stock} initial={1} addItem={addItem}/>
                 }
             </div>
         </div>

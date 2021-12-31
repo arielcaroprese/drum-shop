@@ -1,0 +1,37 @@
+.checkoutDetail {
+    width: 50%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkoutItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: solid 1px grey;
+}
+
+.checkoutItemImgContainer {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.checkoutItemImg {
+    width: 80px;
+}
+
+.checkoutItemDetail {
+    text-align: left;
+}
+
+.checkoutTotalPrice {
+    font-size: 20px;
+    text-align: center;
+}

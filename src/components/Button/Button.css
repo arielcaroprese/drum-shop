@@ -1,0 +1,23 @@
+.button {
+    border: none;
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 16px;
+    transition-duration: 300ms;
+    width: 160px;
+}
+
+.btnActive {
+    background-color: #FDDC5B;
+    color: white;
+}
+
+.btnActive:hover {
+    transform: scale(1.05);
+}
+
+.btnDisabled {
+    background-color: rgb(206, 206, 206);
+    color: rgb(238, 238, 238);
+}

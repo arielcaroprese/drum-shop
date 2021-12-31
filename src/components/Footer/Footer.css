@@ -1,0 +1,39 @@
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    padding: 5vh 10%;
+    border-bottom: 1px solid grey;
+}
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+}
+
+.siteMap {
+    font-size: 18px;
+    color: #fddc5b;
+}
+
+.footerNavLink {
+    color: white;
+    transition: 300ms;
+    padding: 2px 0;
+}
+
+.footerNavLink:hover {
+    color: #fddc5b;
+    transform: translateX(8px);
+}
+
+.credits {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.credits a {
+    color: #fddc5b;
+}

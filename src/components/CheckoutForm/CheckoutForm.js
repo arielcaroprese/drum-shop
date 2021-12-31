@@ -10,6 +10,9 @@ import {CartContext} from "../../context/CartContext"
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 
+// Componentes
+import Button from '../Button/Button'
+
 let orderId = ""
 
 const initialState = {
@@ -41,20 +44,13 @@ const CheckoutForm = () => {
         });
         orderId = docRef.id;
         setOrderSubmit(true);
-        console.log(`Creaste exitosamente tu orden: ${orderId}.`);
     }
 
     return (
-        orderSubmit
+        !orderSubmit
         ?
-        <>
-            <h2>Tu pedido ha sido completado.</h2>
-            <p>Número de pedido: {orderId}</p>
-            <p>Total: $ {totalPrice()}</p>
-        </>
-        :
-        <div className='formContainer' onSubmit={onSubmitHandler}>
-            <form>
+        <div className='formContainer'>
+            <form onSubmit={onSubmitHandler}>
                 <input 
                     id="name" 
                     name="name" 
@@ -83,8 +79,13 @@ const CheckoutForm = () => {
                     placeholder="Teléfono" 
                     onChange={onChangeHandler}
                 ></input>
-                <button>Comprar</button>
+                <Button buttonClass="btnActive" buttonTitle="Confirmar pedido" />
             </form>
+        </div>
+        :
+        <div className='successfulOrder'>
+            <h2>Tu pedido ha sido completado.</h2>
+            <p>Número de pedido: {orderId}</p>
         </div>
     )
 }

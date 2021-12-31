@@ -3,7 +3,7 @@
     margin: 10vh 10vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     flex-wrap: wrap;
     gap: 20px;

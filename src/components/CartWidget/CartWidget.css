@@ -1,13 +1,19 @@
 .cartWidget {
-    display: inline;
-    color: white;
+    display: flex;
+    align-items: center;
+    color: #fddc5b;
+    transition: 300ms;
 }
 
-.cartWidget p {
-    display: inline;
-    margin-right: 8px;
+.cartWidget:hover {
+    transform: scale(1.1);
 }
 
-.cartWidgetNone {
+.cartWidget .cartCounter {
+    display: inline;
+    margin-left: 8px;
+}
+
+.cartCounterNone {
     display: none;
 }

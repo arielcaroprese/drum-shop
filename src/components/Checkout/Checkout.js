@@ -1,13 +1,27 @@
+// React
+
 import React from 'react'
+
+// Estilos
+
+import './Checkout.css'
+
+// Componentes 
+
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 
-//context
+// Context
+
+import CheckoutDetail from '../CheckoutDetail/CheckoutDetail'
 
 const Checkout = () => {
     return (
-        <div>
-            <p>Checkout</p>
-            <CheckoutForm/>
+        <div className='checkoutContainer'>
+            <h1>Checkout</h1>
+            <div className='checkoutColumns'>
+                <CheckoutForm/>
+                <CheckoutDetail/>
+            </div>
         </div>
     )
 }

@@ -1,12 +1,15 @@
+.itemCountContainer {
+    width: 160px;
+}
+
 .ItemCount {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    border: solid 2px rgb(190, 190, 190);
+    border: solid 1px rgb(190, 190, 190);
     border-radius: 4px;
-    margin: 24px;
-    width: 220px;
+    padding: 4px;
 }
 
 .counter {
@@ -15,26 +18,24 @@
     margin: 0;
 }
 
-.button {
-    background-color: rgb(29, 29, 29);
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    color: white;
-    height: 32px;
-    width: 32px;
-    padding: 0px;
+.counterButton {
+    background-color: white;
 }
 
 .addToCart {
-    background-color: rgb(39, 39, 39);
+    background-color: #FDDC5B;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
-    height: 32px;
-    width: 100%;
-    padding: 0px;
-    margin-top: 16px;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 16px;
+    transition-duration: 300ms;
+    width: 160px;
+}
+
+.addToCart:hover {
+    transform: scale(1.05);
 }
 
 .disabled {
