@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pantera-shop/static/css/main.c880acfc.chunk.css",
+    "main.js": "/pantera-shop/static/js/main.f07a675f.chunk.js",
+    "main.js.map": "/pantera-shop/static/js/main.f07a675f.chunk.js.map",
+    "runtime-main.js": "/pantera-shop/static/js/runtime-main.5855f786.js",
+    "runtime-main.js.map": "/pantera-shop/static/js/runtime-main.5855f786.js.map",
+    "static/css/2.4ce9e501.chunk.css": "/pantera-shop/static/css/2.4ce9e501.chunk.css",
+    "static/js/2.7c834098.chunk.js": "/pantera-shop/static/js/2.7c834098.chunk.js",
+    "static/js/2.7c834098.chunk.js.map": "/pantera-shop/static/js/2.7c834098.chunk.js.map",
+    "index.html": "/pantera-shop/index.html",
+    "static/css/2.4ce9e501.chunk.css.map": "/pantera-shop/static/css/2.4ce9e501.chunk.css.map",
+    "static/css/main.c880acfc.chunk.css.map": "/pantera-shop/static/css/main.c880acfc.chunk.css.map",
+    "static/js/2.7c834098.chunk.js.LICENSE.txt": "/pantera-shop/static/js/2.7c834098.chunk.js.LICENSE.txt",
+    "static/media/slider_1.a64bf906.jpg": "/pantera-shop/static/media/slider_1.a64bf906.jpg",
+    "static/media/slider_2.e717febc.jpg": "/pantera-shop/static/media/slider_2.e717febc.jpg",
+    "static/media/slider_3.9a5c19d3.jpg": "/pantera-shop/static/media/slider_3.9a5c19d3.jpg",
+    "static/media/slider_4.ef069868.jpg": "/pantera-shop/static/media/slider_4.ef069868.jpg",
+    "static/media/slider_5.d90dcfbb.jpg": "/pantera-shop/static/media/slider_5.d90dcfbb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5855f786.js",
+    "static/css/2.4ce9e501.chunk.css",
+    "static/js/2.7c834098.chunk.js",
+    "static/css/main.c880acfc.chunk.css",
+    "static/js/main.f07a675f.chunk.js"
+  ]
+}
