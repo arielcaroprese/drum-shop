@@ -2,7 +2,7 @@
   "name": "pantera-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arielcaroprese.github.io/pantera-shop", 
+  "homepage": "https://arielcaroprese.github.io/drum-shop", 
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
